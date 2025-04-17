@@ -1,0 +1,7 @@
+{
+  "modules": {
+    "ABP.ProductManagement": {
+      "path": "ABP.ProductManagement.abpmdl"
+    }
+  }
+}

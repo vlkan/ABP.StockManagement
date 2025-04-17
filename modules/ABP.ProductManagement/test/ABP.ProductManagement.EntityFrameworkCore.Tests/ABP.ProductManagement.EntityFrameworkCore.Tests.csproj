@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <RootNamespace>ABP.ProductManagement</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="9.0.0" />
+    <ProjectReference Include="..\..\src\ABP.ProductManagement.EntityFrameworkCore\ABP.ProductManagement.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\ABP.ProductManagement.Application.Tests\ABP.ProductManagement.Application.Tests.csproj" />
+    <PackageReference Include="Volo.Abp.EntityFrameworkCore.Sqlite" Version="9.1.0" />
+
+  </ItemGroup>
+
+</Project>
