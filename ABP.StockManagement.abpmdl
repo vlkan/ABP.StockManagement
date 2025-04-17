@@ -1,0 +1,101 @@
+{
+  "template": "app",
+  "imports": {
+    "Volo.Abp.LeptonXLiteTheme": {
+      "version": "4.1.0",
+      "isInstalled": true
+    },
+    "Volo.Abp.Account": {
+      "version": "9.1.0",
+      "isInstalled": true
+    },
+    "Volo.Abp.OpenIddict": {
+      "version": "9.1.0",
+      "isInstalled": true
+    },
+    "Volo.Abp.Identity": {
+      "version": "9.1.0",
+      "isInstalled": true
+    },
+    "Volo.Abp.TenantManagement": {
+      "version": "9.1.0",
+      "isInstalled": true
+    },
+    "Volo.Abp.SettingManagement": {
+      "version": "9.1.0",
+      "isInstalled": true
+    },
+    "Volo.Abp.PermissionManagement": {
+      "version": "9.1.0",
+      "isInstalled": true
+    },
+    "Volo.Abp.FeatureManagement": {
+      "version": "9.1.0",
+      "isInstalled": true
+    }
+  },
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "ABP.StockManagement.Application": {
+      "path": "src/ABP.StockManagement.Application/ABP.StockManagement.Application.abppkg",
+      "folder": "src"
+    },
+    "ABP.StockManagement.Application.Tests": {
+      "path": "test/ABP.StockManagement.Application.Tests/ABP.StockManagement.Application.Tests.abppkg",
+      "folder": "test"
+    },
+    "ABP.StockManagement.Domain.Shared": {
+      "path": "src/ABP.StockManagement.Domain.Shared/ABP.StockManagement.Domain.Shared.abppkg",
+      "folder": "src"
+    },
+    "ABP.StockManagement.Application.Contracts": {
+      "path": "src/ABP.StockManagement.Application.Contracts/ABP.StockManagement.Application.Contracts.abppkg",
+      "folder": "src"
+    },
+    "ABP.StockManagement.HttpApi": {
+      "path": "src/ABP.StockManagement.HttpApi/ABP.StockManagement.HttpApi.abppkg",
+      "folder": "src"
+    },
+    "ABP.StockManagement.HttpApi.Client": {
+      "path": "src/ABP.StockManagement.HttpApi.Client/ABP.StockManagement.HttpApi.Client.abppkg",
+      "folder": "src"
+    },
+    "ABP.StockManagement.EntityFrameworkCore.Tests": {
+      "path": "test/ABP.StockManagement.EntityFrameworkCore.Tests/ABP.StockManagement.EntityFrameworkCore.Tests.abppkg",
+      "folder": "test"
+    },
+    "ABP.StockManagement.EntityFrameworkCore": {
+      "path": "src/ABP.StockManagement.EntityFrameworkCore/ABP.StockManagement.EntityFrameworkCore.abppkg",
+      "folder": "src"
+    },
+    "ABP.StockManagement.TestBase": {
+      "path": "test/ABP.StockManagement.TestBase/ABP.StockManagement.TestBase.abppkg",
+      "folder": "test"
+    },
+    "ABP.StockManagement.Domain.Tests": {
+      "path": "test/ABP.StockManagement.Domain.Tests/ABP.StockManagement.Domain.Tests.abppkg",
+      "folder": "test"
+    },
+    "ABP.StockManagement.HttpApi.Client.ConsoleTestApp": {
+      "path": "test/ABP.StockManagement.HttpApi.Client.ConsoleTestApp/ABP.StockManagement.HttpApi.Client.ConsoleTestApp.abppkg",
+      "folder": "test"
+    },
+    "ABP.StockManagement.DbMigrator": {
+      "path": "src/ABP.StockManagement.DbMigrator/ABP.StockManagement.DbMigrator.abppkg",
+      "folder": "src"
+    },
+    "ABP.StockManagement.HttpApi.Host": {
+      "path": "src/ABP.StockManagement.HttpApi.Host/ABP.StockManagement.HttpApi.Host.abppkg",
+      "folder": "src"
+    },
+    "ABP.StockManagement.Domain": {
+      "path": "src/ABP.StockManagement.Domain/ABP.StockManagement.Domain.abppkg",
+      "folder": "src"
+    }
+  }
+}
