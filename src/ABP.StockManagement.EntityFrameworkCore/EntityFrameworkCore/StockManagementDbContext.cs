@@ -14,6 +14,7 @@ using Volo.Abp.SettingManagement.EntityFrameworkCore;
 using Volo.Abp.OpenIddict.EntityFrameworkCore;
 using Volo.Abp.TenantManagement;
 using Volo.Abp.TenantManagement.EntityFrameworkCore;
+using ABP.ProductManagement.EntityFrameworkCore;
 
 namespace ABP.StockManagement.EntityFrameworkCore;
 
@@ -78,6 +79,7 @@ public class StockManagementDbContext :
         builder.ConfigureOpenIddict();
         builder.ConfigureTenantManagement();
         builder.ConfigureBlobStoring();
+        builder.ConfigureProductManagement();
         
         /* Configure your own tables/entities inside here */
 
