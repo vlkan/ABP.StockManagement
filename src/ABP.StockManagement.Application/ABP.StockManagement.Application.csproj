@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\modules\ABP.ProductManagement\src\ABP.ProductManagement.Application\ABP.ProductManagement.Application.csproj" />
     <ProjectReference Include="..\ABP.StockManagement.Domain\ABP.StockManagement.Domain.csproj" />
     <ProjectReference Include="..\ABP.StockManagement.Application.Contracts\ABP.StockManagement.Application.Contracts.csproj" />
   </ItemGroup>

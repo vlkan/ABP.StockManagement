@@ -6,6 +6,7 @@ using Volo.Abp.AutoMapper;
 using Volo.Abp.FeatureManagement;
 using Volo.Abp.Modularity;
 using Volo.Abp.TenantManagement;
+using ABP.ProductManagement;
 
 namespace ABP.StockManagement;
 
@@ -17,7 +18,8 @@ namespace ABP.StockManagement;
     typeof(AbpIdentityApplicationModule),
     typeof(AbpAccountApplicationModule),
     typeof(AbpTenantManagementApplicationModule),
-    typeof(AbpSettingManagementApplicationModule)
+    typeof(AbpSettingManagementApplicationModule),
+    typeof(ProductManagementApplicationModule)
     )]
 public class StockManagementApplicationModule : AbpModule
 {

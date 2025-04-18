@@ -17,6 +17,7 @@ using Volo.Abp.Emailing;
 using Volo.Abp.FeatureManagement;
 using Volo.Abp.Identity;
 using Volo.Abp.TenantManagement;
+using ABP.ProductManagement;
 
 namespace ABP.StockManagement;
 
@@ -33,7 +34,8 @@ namespace ABP.StockManagement;
     typeof(AbpIdentityDomainModule),
     typeof(AbpOpenIddictDomainModule),
     typeof(AbpTenantManagementDomainModule),
-    typeof(BlobStoringDatabaseDomainModule)
+    typeof(BlobStoringDatabaseDomainModule),
+    typeof(ProductManagementDomainModule)
     )]
 public class StockManagementDomainModule : AbpModule
 {

@@ -34,4 +34,8 @@
     <Content Remove="Localization\StockManagement\*.json" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\modules\ABP.ProductManagement\src\ABP.ProductManagement.Domain.Shared\ABP.ProductManagement.Domain.Shared.csproj" />
+  </ItemGroup>
+
 </Project>

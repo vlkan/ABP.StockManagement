@@ -13,6 +13,7 @@ using Volo.Abp.VirtualFileSystem;
 using Volo.Abp.OpenIddict;
 using Volo.Abp.BlobStoring.Database;
 using Volo.Abp.TenantManagement;
+using ABP.ProductManagement;
 
 namespace ABP.StockManagement;
 
@@ -25,7 +26,8 @@ namespace ABP.StockManagement;
     typeof(AbpIdentityDomainSharedModule),
     typeof(AbpOpenIddictDomainSharedModule),
     typeof(AbpTenantManagementDomainSharedModule),
-    typeof(BlobStoringDatabaseDomainSharedModule)
+    typeof(BlobStoringDatabaseDomainSharedModule),
+    typeof(ProductManagementDomainSharedModule)
     )]
 public class StockManagementDomainSharedModule : AbpModule
 {

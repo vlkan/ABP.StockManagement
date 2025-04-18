@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\modules\ABP.ProductManagement\src\ABP.ProductManagement.HttpApi.Client\ABP.ProductManagement.HttpApi.Client.csproj" />
     <ProjectReference Include="..\ABP.StockManagement.Application.Contracts\ABP.StockManagement.Application.Contracts.csproj" />
   </ItemGroup>
 

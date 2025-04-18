@@ -14,6 +14,7 @@ using Volo.Abp.SettingManagement.EntityFrameworkCore;
 using Volo.Abp.BlobStoring.Database.EntityFrameworkCore;
 using Volo.Abp.TenantManagement.EntityFrameworkCore;
 using Volo.Abp.Studio;
+using ABP.ProductManagement.EntityFrameworkCore;
 
 namespace ABP.StockManagement.EntityFrameworkCore;
 
@@ -28,7 +29,8 @@ namespace ABP.StockManagement.EntityFrameworkCore;
     typeof(AbpIdentityEntityFrameworkCoreModule),
     typeof(AbpOpenIddictEntityFrameworkCoreModule),
     typeof(AbpTenantManagementEntityFrameworkCoreModule),
-    typeof(BlobStoringDatabaseEntityFrameworkCoreModule)
+    typeof(BlobStoringDatabaseEntityFrameworkCoreModule),
+    typeof(ProductManagementEntityFrameworkCoreModule)
     )]
 public class StockManagementEntityFrameworkCoreModule : AbpModule
 {
