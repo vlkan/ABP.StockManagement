@@ -15,6 +15,7 @@ using Volo.Abp.BlobStoring.Database.EntityFrameworkCore;
 using Volo.Abp.TenantManagement.EntityFrameworkCore;
 using Volo.Abp.Studio;
 using ABP.ProductManagement.EntityFrameworkCore;
+using ABP.StockManagement.Customers;
 
 namespace ABP.StockManagement.EntityFrameworkCore;
 
@@ -44,9 +45,10 @@ public class StockManagementEntityFrameworkCoreModule : AbpModule
     {
         context.Services.AddAbpDbContext<StockManagementDbContext>(options =>
         {
-                /* Remove "includeAllEntities: true" to create
-                 * default repositories only for aggregate roots */
+            /* Remove "includeAllEntities: true" to create
+             * default repositories only for aggregate roots */
             options.AddDefaultRepositories(includeAllEntities: true);
+            options.AddRepository<Customer, EfCoreCustomerRepository>();
         });
 
         if (AbpStudioAnalyzeHelper.IsInAnalyzeMode)
@@ -62,6 +64,6 @@ public class StockManagementEntityFrameworkCoreModule : AbpModule
             options.UseSqlServer();
 
         });
-        
+
     }
 }

@@ -15,6 +15,7 @@ using Volo.Abp.OpenIddict.EntityFrameworkCore;
 using Volo.Abp.TenantManagement;
 using Volo.Abp.TenantManagement.EntityFrameworkCore;
 using ABP.ProductManagement.EntityFrameworkCore;
+using ABP.StockManagement.Customers;
 
 namespace ABP.StockManagement.EntityFrameworkCore;
 
@@ -80,14 +81,16 @@ public class StockManagementDbContext :
         builder.ConfigureTenantManagement();
         builder.ConfigureBlobStoring();
         builder.ConfigureProductManagement();
-        
+
         /* Configure your own tables/entities inside here */
 
-        //builder.Entity<YourEntity>(b =>
-        //{
-        //    b.ToTable(StockManagementConsts.DbTablePrefix + "YourEntities", StockManagementConsts.DbSchema);
-        //    b.ConfigureByConvention(); //auto configure for the base class props
-        //    //...
-        //});
+        builder.Entity<Customer>(b =>
+        {
+            b.ToTable(StockManagementConsts.DbTablePrefix + "Customer", StockManagementConsts.DbSchema);
+            b.ConfigureByConvention(); //auto configure for the base class props
+            b.Property(x => x.Code).IsRequired().HasMaxLength(CustomerConsts.MaxNameLength);
+            b.Property(x => x.Name).HasMaxLength(CustomerConsts.MaxNameLength);
+            //...
+        });
     }
 }
