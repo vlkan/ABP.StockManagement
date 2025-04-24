@@ -14,18 +14,26 @@ public class CustomerAppService : StockManagementAppService, ICustomerAppService
 
     public CustomerAppService(ICustomerRepository customerRepository, CustomerManager customerManager)
     {
-        customerRepository = customerRepository;
-        customerManager = customerManager;
+        this.customerRepository = customerRepository;
+        this.customerManager = customerManager;
     }
 
     public async Task<CustomerDto> CreateAsync(CustomerCreateDto input)
     {
-        var customer = await customerManager.CreateAsync(input.Code, input.Name);
-        customer.SetName(input.Name);
+        try
+        {
+            var customer = await customerManager.CreateAsync(input.Code, input.Name);
+            customer.SetName(input.Name);
 
-        await customerRepository.InsertAsync(customer);
+            await customerRepository.InsertAsync(customer);
 
-        return ObjectMapper.Map<Customer, CustomerDto>(customer);
+            return ObjectMapper.Map<Customer, CustomerDto>(customer);
+        }
+        catch (Exception ex)
+        {
+
+            throw;
+        }
     }
 
     public async Task<CustomerDto> GetAsync(Guid id)
